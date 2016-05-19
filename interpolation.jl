@@ -1,6 +1,6 @@
 function my_lin_interp(grid, vals)
     function func(x)
-        index_1 = searchsortedfirst(grid, x)
+        index_1 = index_0 + 1
         index_0 = searchsortedlast(grid, x)
         x_1 = grid[index_1]
         x_0 = grid[index_0]
