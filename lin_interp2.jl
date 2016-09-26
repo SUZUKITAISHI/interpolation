@@ -8,10 +8,10 @@ function Base.call(points::lin_interp2, x::Real)
     if i == 0 || i == length(grid)
         return 0
     end
-    x_i = grid[i]
-    x_j = grid[i + 1]
-    y_i = vals[i]
-    y_j = vals[i + 1]
+    x_i = points.grid[i]
+    x_j = points.grid[i + 1]
+    y_i = points.vals[i]
+    y_j = points.vals[i + 1]
         
     y = y_i + (y_j - y_i) * ((x - x_i) / (x_j - x_i))
     return y
